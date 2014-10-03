@@ -1,0 +1,23 @@
+<template name="example1">
+    <h1 class="jumbotron">
+        autorun and stop()
+        <small>Example 1</small>
+    </h1>
+    <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <h4>Add</h4>
+            <button class="btn btn-default" data-hook="add">Add</button>
+            <h4>Tracker</h4>
+            <button class="btn btn-default" data-hook="autorun">Tracker.autorun()</button>
+            <button class="btn btn-default" data-hook="stop">computation.stop()</button>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <h3>{{counter}}</h3>
+            <pre id="example1_counter"></pre>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <strong>Session.keyDeps.counter._dependentsById:</strong>
+            <pre style="font-size: 10px">{{ sessionDependentsJSON }}</pre>
+        </div>
+    </div>
+</template>

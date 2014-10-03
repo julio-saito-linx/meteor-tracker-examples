@@ -1,0 +1,30 @@
+<template name="example2">
+    <h1 class="jumbotron">
+        Dependency
+        <small>Example 2</small>
+    </h1>
+    <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <h4>Dependencies</h4>
+            <p>
+                {{ dependency1 }}
+            </p>
+            <p>
+               <button class="btn btn-default" data-hook="stop1">stop1</button>
+            </p>
+            <hr>
+            <p>
+                {{ dependency2 }}
+            </p>
+            <p>
+               <button class="btn btn-default" data-hook="stop2">stop2</button>
+            </p>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <h4>Changed</h4>
+            <p>
+                <button class="btn btn-default" data-hook="changed">changed()</button>
+            </p>
+        </div>
+    </div>
+</template>
