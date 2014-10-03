@@ -22,6 +22,11 @@ Template.example2.events({
     'click button[data-hook="stop1"]': function (ev) {
         var dependencies = _.pairs(someData.dep._dependentsById);
         var first = _.first(dependencies);
+
+        if(!first){
+            return;
+        }
+
         var computed = first[1];
 
         $(ev.target).text('STOPED');
@@ -31,6 +36,11 @@ Template.example2.events({
     'click button[data-hook="stop2"]': function (ev) {
         var dependencies = _.pairs(someData.dep._dependentsById);
         var last = _.last(dependencies);
+
+        if(!last){
+            return;
+        }
+
         var computed = last[1];
 
         $(ev.target).text('STOPED');
